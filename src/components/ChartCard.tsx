@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import data from "../data/data.json";
 import logo from "../images/logo.svg";
 
@@ -89,12 +90,14 @@ const Bar = ({ expense, percentage, style }: BarProps) => {
           ${expense.amount}
         </div>
       </div>
-      <div
+      <motion.div
+        initial={{ height: 0 }}
+        animate={{ height: `${percentage}%` }}
+        transition={{ type: "spring", damping: 5, stiffness: 50 }}
         onMouseOver={() => setShowAmt(true)}
         onMouseOut={() => setShowAmt(false)}
         className={style}
-        style={{ height: `${percentage}%` }}
-      ></div>
+      ></motion.div>
       <p className="text-mediumBrown text-xs mt-1 md:text-15 md:mt-2">
         {expense.day}
       </p>
