@@ -20,7 +20,7 @@ export default function ChartCard() {
 
   return (
     <div className="w-full md:w-[33.75rem]">
-      <div className="flex items-center justify-between bg-softRed text-white rounded-lg p-5 mb-4 md:px-8 md:py-7">
+      <div className="flex items-center justify-between bg-softRed text-white rounded-lg p-5 mb-4 md:px-8 md:py-7 md:rounded-2xl md:mb-6">
         <div className="">
           <p className="">My balance</p>
           <h1 className="text-2xl font-bold md:text-[2rem] md:leading-10">
@@ -32,7 +32,7 @@ export default function ChartCard() {
         </div>
       </div>
 
-      <div className="p-5 rounded-lg bg-veryPaleOrange md:p-9">
+      <div className="p-5 rounded-lg bg-veryPaleOrange md:p-9 md:rounded-2xl">
         <h2 className="text-2xl font-bold text-darkBrown md:mb-12 md:text-[2rem] md:leading-10">
           Spending - Last 7 days
         </h2>
